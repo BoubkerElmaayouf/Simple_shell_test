@@ -1,7 +1,6 @@
-https://github.com/tchapi/markdown-cheatsheet/blob/master/README.md
 # Simple Shell Project
 Creating a simple Unix command line interpreter.
-![picture alt](http://via.placeholder.com/200x150 "SIMPLE_SHELL")
+![picture alt](http://via.placeholder.com/1000x500 "SIMPLE_SHELL")
 ALX SE COHORT 13 //2023
 
 ## Compilation
