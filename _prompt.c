@@ -15,7 +15,7 @@ void _prompt(char **argv, char *env[])
 char *strptr = NULL;
 pid_t pid;
 ssize_t char_len;
-int stat, i = 0,j;
+int stat, i,j;
 size_t n = 0;
 char *argvptr[MAX_COMMANDS];
 char *delim = " ";
@@ -30,7 +30,7 @@ while (infinity)
         free(strptr);
         exit(EXIT_FAILURE);
     }
-
+    i = 0;
     for (;strptr[i]; i++)
     {
         if(strptr[i] == '\n')
