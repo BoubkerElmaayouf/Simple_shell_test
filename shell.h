@@ -21,6 +21,6 @@
 /* prototypes */
 char *_strtok(char *line, char *delim);
 void _prompt(char **argv, char *env[]);
-
+void exitshell(int n, char *input);
 
 #endif

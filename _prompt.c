@@ -30,6 +30,7 @@ while (infinity)
         free(strptr);
         exit(EXIT_FAILURE);
     }
+    
     i = 0;
     for (;strptr[i]; i++)
     {
@@ -37,20 +38,21 @@ while (infinity)
             strptr[i] = 0;
     }
 
+    exitshell(EXIT_SUCCESS, strptr);
     j = 0;
     argvptr[j] = _strtok(strptr, delim);
     while (argvptr[j] != NULL)
     {
         j++;
         argvptr[j] = _strtok(NULL, delim);
-    }    
+    }
+
     pid = fork();
-    if (pid < 0)
+    if (pid == -1)
     {
         free(strptr);
         exit(EXIT_FAILURE);
     }
-
     if (pid == 0)
     {
         int val = execve(argvptr[0], argvptr, env);
@@ -59,10 +61,9 @@ while (infinity)
               perror(argv[0]);
         }
     }
-    else
-	{
-        wait(&stat);
-	
-	}
+   else
+   {
+      wait(&stat);
+   }
 }
 }
