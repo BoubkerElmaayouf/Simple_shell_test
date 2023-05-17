@@ -19,6 +19,7 @@
 
 
 /* prototypes */
+char *_strtok(char *line, char *delim);
 void _prompt(char **argv, char *env[]);
 
 

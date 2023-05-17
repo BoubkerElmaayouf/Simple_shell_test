@@ -38,11 +38,11 @@ while (infinity)
     }
 
     j = 0;
-    argvptr[j] = strtok(strptr, delim);
+    argvptr[j] = _strtok(strptr, delim);
     while (argvptr[j] != NULL)
     {
         j++;
-        argvptr[j] = strtok(NULL, delim);
+        argvptr[j] = _strtok(NULL, delim);
     }    
     pid = fork();
     if (pid < 0)
@@ -60,6 +60,9 @@ while (infinity)
         }
     }
     else
+	{
         wait(&stat);
+	
+	}
 }
 }
